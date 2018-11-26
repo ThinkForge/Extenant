@@ -38,7 +38,9 @@ defmodule Extenant.Mixfile do
       {:phoenix_ecto, "~> 3.2"},
       {:postgrex, ">= 0.0.0"},
       {:gettext, "~> 0.11"},
-      {:cowboy, "~> 1.0"}
+      {:plug_cowboy, "~> 1.0"},
+      {:comeonin, "~> 4.1"},
+      {:bcrypt_elixir, "~> 1.1"}
     ]
   end
 
@@ -52,7 +54,7 @@ defmodule Extenant.Mixfile do
     [
       "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
       "ecto.reset": ["ecto.drop", "ecto.setup"],
-      "test": ["ecto.create --quiet", "ecto.migrate", "test"]
+      test: ["ecto.create --quiet", "ecto.migrate", "test"]
     ]
   end
 end
