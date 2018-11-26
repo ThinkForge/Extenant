@@ -1,5 +1,4 @@
 defmodule Extenant.AuthenticationService do
-
   @seed Application.fetch_env!(:extenant, :seed)
   @secret Application.fetch_env!(:extenant, :auth_secret)
 
