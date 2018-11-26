@@ -9,3 +9,5 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+Extenant.Repo.insert!(Extenant.Accounts.User.changeset(%Extenant.Accounts.User{}, %{email: "tester123@test.dev", password: "Testing123!", firstname: "Test", lastname: "User123"}))

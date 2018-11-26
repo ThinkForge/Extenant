@@ -22,6 +22,15 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:user_id]
 
+config :extenant,
+  seed: "aoid231",
+  auth_secret: "xVg0A2r6i7BL12kYsTiReG2VtQXSjZ"
+  # good way to generate:
+  # :crypto.strong_rand_bytes(30)
+  # |> Base.url_encode64
+  # |> binary_part(0, 30)
+
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
